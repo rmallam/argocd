@@ -3,6 +3,6 @@
 # Declare variables to be passed into your templates.
 
 machinesets:
-  # - openshift-cluster-pro-qbtpv-worker-australiaeast1
+  - openshift-cluster-pro-qbtpv-worker-australiaeast1
   - openshift-cluster-pro-qbtpv-worker-australiaeast2
   - openshift-cluster-pro-qbtpv-worker-australiaeast3 
