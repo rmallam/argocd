@@ -1,0 +1,22 @@
+{{- range $key, $value := .Values.PROJECTS }}
+{{- $projectname := printf "%s" .NAME -}}
+{{- $displayname := printf "%s" .DISPLAYNAME -}}
+{{- $description := printf "%s" .DESCRIPTION -}}
+{{- $adminuser := printf "%s" .ADMIN_USER -}}
+{{- $requester := printf "%s" .REQUESTING_USER -}}
+---
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  annotations:
+    openshift.io/description: {{ $description }}
+    openshift.io/display-name: {{ $displayname }}
+    openshift.io/requester: {{  $requester }}
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "1"
+  creationTimestamp: null
+  name: {{  $projectname }}
+spec:
+  finalizers:
+  - kubernetes
+{{ end }}

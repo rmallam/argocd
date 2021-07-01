@@ -1,0 +1,22 @@
+Operators:
+  - name: kiali-ossm
+    project: openshift-operators
+    source: redhat-operators
+    source_namespace: openshift-marketplace
+    api_group: operators.coreos.com/v1alpha1
+    plan_approval: Automatic
+    channel: stable
+  - name: jaeger-product
+    project: openshift-operators
+    source: redhat-operators
+    source_namespace: openshift-marketplace
+    api_group: operators.coreos.com/v1alpha1
+    plan_approval: Automatic
+    channel: stable
+  - name: servicemeshoperator
+    project: openshift-operators
+    source: redhat-operators
+    source_namespace: openshift-marketplace
+    api_group: operators.coreos.com/v1alpha1
+    plan_approval: Automatic
+    channel: stable

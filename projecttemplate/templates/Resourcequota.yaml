@@ -1,0 +1,20 @@
+{{- range $key, $value := .Values.PROJECTS }}
+{{- $projectname := printf "%s" .NAME -}}
+{{- $displayname := printf "%s" .DISPLAYNAME -}}
+{{- $description := printf "%s" .DESCRIPTION -}}
+{{- $adminuser := printf "%s" .ADMIN_USER -}}
+{{- $requester := printf "%s" .REQUESTING_USER -}}
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  creationTimestamp: null
+  name: dx-openshift-non-prod-resourcequota
+  namespace: {{ $projectname }}
+spec:
+  hard:
+    cpu: "2"
+    memory: 3G
+    persistentvolumeclaims: "2"
+    pods: "30"
+{{ end }}

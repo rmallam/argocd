@@ -1,0 +1,15 @@
+# Default values for projecttemplate.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+PROJECTS:
+  - NAME: rakeshtest
+    DISPLAYNAME: rakeshtest
+    DESCRIPTION: rakeshtest
+    ADMIN_USER: rmallam@redhat.com
+    REQUESTING_USER: rakesh
+  - NAME: rakeshtest1
+    DISPLAYNAME: rakeshtest1
+    DESCRIPTION: rakeshtest1
+    ADMIN_USER: rmallam@redhat.com
+    REQUESTING_USER: rakesh1

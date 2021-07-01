@@ -1,0 +1,21 @@
+{{- range $key, $value := .Values.Operators }}
+{{- $operatorname := printf "%s" .name -}}
+{{- $projectname := printf "%s" .project -}}
+{{- $operatorsource := printf "%s" .source -}}
+{{- $operatorsourcenamepsace := printf "%s" .source_namespace -}}
+{{- $operatorapigroup := printf "%s" .api_group -}}
+{{- $operatorplanapproval := printf "%s" .plan_approval -}}
+{{- $operatorchannel := printf "%s" .channel -}}
+---
+apiVersion: {{ $operatorapigroup  }}
+kind: Subscription
+metadata:
+  name: {{ $operatorname }}
+  namespace: {{ $projectname }}
+spec:
+  channel: {{ $operatorchannel }}
+  installPlanApproval: {{ $operatorplanapproval }}
+  name: {{ $operatorname }}
+  source: {{ $operatorsource }}
+  sourceNamespace: {{ $operatorsourcenamepsace }}
+{{ end }}

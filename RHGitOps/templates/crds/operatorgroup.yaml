@@ -1,8 +1,8 @@
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: argocd
-  namespace: argocd
+  name: gitops
+  namespace: gitops
 spec:
   targetNamespaces:
   - argocd

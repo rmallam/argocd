@@ -4,8 +4,9 @@ metadata:
   name: argocd-operator
   namespace: argocd
 spec:
-  channel: alpha
+  channel: preview
   installPlanApproval: Automatic
-  name: argocd-operator
-  source: community-operators
+  name: openshift-gitops-operator
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
+  startingCSV: openshift-gitops-operator.v1.0.0
