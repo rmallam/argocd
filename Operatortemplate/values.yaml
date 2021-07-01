@@ -20,3 +20,10 @@ Operators:
     api_group: operators.coreos.com/v1alpha1
     plan_approval: Automatic
     channel: stable
+  - name: quay-operator
+    project: dx-vault-demo
+    source: redhat-operators
+    source_namespace: openshift-marketplace
+    api_group: operators.coreos.com/v1alpha1
+    plan_approval: Automatic
+    channel: quay-v3.5
