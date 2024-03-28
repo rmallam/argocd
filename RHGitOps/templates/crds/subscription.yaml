@@ -7,9 +7,8 @@ metadata:
     "helm.sh/hook": pre-install
     "helm.sh/hook-weight": "1"
 spec:
-  channel: preview
+  channel: stable
   installPlanApproval: Automatic
   name: openshift-gitops-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: openshift-gitops-operator.v1.0.0
