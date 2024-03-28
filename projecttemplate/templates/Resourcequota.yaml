@@ -1,3 +1,4 @@
+{{ if eq .Values.resourcequota "true" }}
 {{- range $key, $value := .Values.PROJECTS }}
 {{- $projectname := printf "%s" .NAME -}}
 {{- $displayname := printf "%s" .DISPLAYNAME -}}
@@ -17,4 +18,5 @@ spec:
     memory: 3G
     persistentvolumeclaims: "2"
     pods: "30"
+{{ end }}
 {{ end }}

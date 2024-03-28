@@ -1,3 +1,4 @@
+{{ if eq .Values.limitrange "true" }}
 {{- range $key, $value := .Values.PROJECTS }}
 {{- $projectname := printf "%s" .NAME -}}
 {{- $displayname := printf "%s" .DISPLAYNAME -}}
@@ -46,4 +47,5 @@ spec:
         storage: "2Gi"
       max:
         storage: "50Gi"
+{{ end }}
 {{ end }}

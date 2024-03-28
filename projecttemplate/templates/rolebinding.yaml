@@ -1,3 +1,4 @@
+{{ if eq .Values.rolecreate "true" }}
 {{- range $key, $value := .Values.PROJECTS }}
 {{- $projectname := printf "%s" .NAME -}}
 {{- $displayname := printf "%s" .DISPLAYNAME -}}
@@ -19,4 +20,5 @@ subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
   name: {{ $adminuser }}
+{{ end }}
 {{ end }}

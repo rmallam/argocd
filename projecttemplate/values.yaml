@@ -3,13 +3,12 @@
 # Declare variables to be passed into your templates.
 
 PROJECTS:
-  - NAME: rakeshtest
-    DISPLAYNAME: rakeshtest
-    DESCRIPTION: rakeshtest
+  - NAME: 3scale
+    DISPLAYNAME: 3scale
+    DESCRIPTION: 3scale
     ADMIN_USER: rmallam@redhat.com
-    REQUESTING_USER: rakesh
-  - NAME: rakeshtest1
-    DISPLAYNAME: rakeshtest1
-    DESCRIPTION: rakeshtest1
-    ADMIN_USER: rmallam@redhat.com
-    REQUESTING_USER: rakesh1
+    REQUESTING_USER: 3scale
+
+rolecreate: "false"
+limitrange: "false"
+resourcequota: "false"
